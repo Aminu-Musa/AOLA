@@ -19,9 +19,11 @@ a {
 }
 
 :root {
+    --action-btn-hover-color: #00939d;
     --action-btn-bg-color: #02B4C0;
     --action-btn-text-color: #fff;
     --notification-color: #C9143F;
+    --underline-color: #ff0000;
     --seconday-text-color: #636465;
     --primary-text-color: #090909;
 }
@@ -31,6 +33,7 @@ a {
 /* NAVBAR START */
 nav {
     margin-top: 10px;
+    position: relative;
 }
 
 nav .container {
@@ -76,6 +79,10 @@ nav .container {
     color: var(--action-btn-text-color) !important;
     padding: 10px 25px;
     border-radius: 50px;
+    transition: 250ms ;
+}
+.action-btn:hover {
+    background: var(--action-btn-hover-color);
 }
 
 .nav-menu li a {
@@ -98,6 +105,13 @@ nav .container {
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 1px;
+}
+
+.open-menu-btn, .close-menu-btn{
+    display: none;
+}
+.open-menu-btn svg, .close-menu-btn svg{
+    width: 30px;
 }
 
 /* NAV BAR END'S HERE */
@@ -218,4 +232,30 @@ nav .container {
     color: var(--action-btn-text-color);
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+.card-title{
+    font-size: 1.5rem;
+}
+
+.card-desc{
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: var(--seconday-text-color);
+    margin-top: 25px;
+}
+
+.card4 .card-desc{
+    margin-top: -5px;
+}
+.underline-words{
+    display: inline-block;
+    position: relative;
+}
+
+.underline-words::after{
+    content: "";
+    display: block;
+    background: var( --underline-color);
+    height: 2px;
 }
